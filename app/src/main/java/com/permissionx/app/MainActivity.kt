@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         binding.makeCallButton.setOnClickListener {
             PermissionX.request(
                 this,
-                android.Manifest.permission.CALL_PHONE
+                android.Manifest.permission.CALL_PHONE,
+                android.Manifest.permission.READ_CONTACTS
             ){
                 // 处理权限的申请结果
                 allGranted, deniedList ->
